@@ -13,8 +13,8 @@ const Aside = () => {
                 <div className='w-48 h-auto flex justify-between items-center'>
                     <Link to={'/dashboard'} className='flex justify-center w-full'>
                         <div className='text-2xl font-bold px-8'>
-                            <span className='text-white'>Food</span>
-                            <span className='text-[#FD6219]'>Radar</span>
+                            <span className='text-[#FD6219]'>Food</span>
+                            <span className='text-white'>Radar</span>
                         </div>
                     </Link>
                     <div className='mr-3 md:hidden p-2 rounded-md cursor-pointer'>
@@ -33,19 +33,19 @@ const Aside = () => {
                             <Link className="hover:bg-[#0d0101] p-2 duration-200 ease-in-out border-l-[3px] border-transparent">
                                 <div className='flex items-center gap-2 ml-2'>
                                     <AiOutlineFileText />
-                                    Reported Cases
+                                    Reported{'\u00A0'}Cases
                                 </div>
                             </Link>
                             <Link className="hover:bg-[#0d0101] p-2 duration-200 ease-in-out border-l-[3px] border-transparent">
                                 <div className='flex items-center gap-2 ml-2'>
                                     <MdOutlineNoteAdd />
-                                    Submit your statement
+                                    Submit{'\u00A0'}your{'\u00A0'}statement
                                 </div>
                             </Link>
                             <Link className="hover:bg-[#0d0101] p-2 duration-200 ease-in-out border-l-[3px] border-transparent">
                                 <div className='flex items-center gap-2 ml-2'>
                                     <BiSupport />
-                                    Resources & support
+                                    Resources{'\u00A0'}&{'\u00A0'}support
                                 </div>
                             </Link>
                         </div>
