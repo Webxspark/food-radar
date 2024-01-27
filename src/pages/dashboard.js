@@ -14,18 +14,26 @@ const Dashboard = () => {
                             <div className='text-[#FD6219] font-bold'>Account Verification</div>
                         </div>
                     </div>
-                    <div className='border-[1.5px] border-white w-[17%]'></div>
+                    <div className='border-[0.5px] border-white w-[17%]'></div>
                 </div>
-                <form className='bg-[#000] m-20 text-white flex flex-col items-center justify-center w-full'>
+                <form className='bg-[#000] m-20 text-white flex flex-col gap-6 items-start justify-center w-full'>
                     <div className='flex items-center gap-10 justify-center'>
                         <div className='flex flex-col gap-2 items-start justify-center'>
                             <div className=''>Full Name</div>
-                            <input className='bg-[#000] border-white px-3 py-1 border-[1.5px] rounded-sm' placeholder='Enter your name' />
+                            <input className='bg-[#000] border-white px-3 py-1 border-[0.5px] rounded-sm' placeholder='Enter your name' />
                         </div>
                         <div className='flex flex-col gap-2 items-start justify-center'>
                             <div>Phone Number</div>
-                            <input className='bg-[#000] border-white px-3 py-1 border-[1.5px] rounded-sm' placeholder='Enter your phone number' />
+                            <input className='bg-[#000] border-white px-3 py-1 border-[0.5px] rounded-sm' placeholder='Enter your phone number' />
                         </div>
+                    </div>
+                    <div className='flex flex-col gap-2 items-start justify-center'>
+                        <div>Email</div>
+                        <input className='bg-[#000] border-white px-3 py-1 border-[0.5px] rounded-sm w-full' placeholder='Enter your email' />
+                    </div>
+                    <div className='flex flex-col gap-2 items-start justify-center'>
+                        <div>Aadhar Card number</div>
+                        <input className='bg-[#000] border-white px-3 py-1 border-[0.5px] rounded-sm w-full' placeholder='Enter your Aadhar number' />
                     </div>
                 </form>
             </div>
