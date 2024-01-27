@@ -1,11 +1,10 @@
 import React from 'react';
-import Aside from '../components/aside';
 import { GoPersonFill } from 'react-icons/go';
-import Admin from './admin';
+import AdminPage from './admin-page';
 
 const Dashboard = () => {
     return (
-        <Admin>
+        <AdminPage>
             <div className='bg-[#121212] flex flex-col gap-10'>
                 <div className='flex flex-col items-start px-8'>
                     <div className='flex'>
@@ -43,7 +42,7 @@ const Dashboard = () => {
                     </form>
                 </div>
             </div>
-        </Admin>
+        </AdminPage>
     );
 };
 
