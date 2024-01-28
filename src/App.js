@@ -11,13 +11,23 @@ import {
   getDefaultWallets,
   RainbowKitProvider,
 } from '@rainbow-me/rainbowkit';
-import { configureChains, createConfig, WagmiConfig } from 'wagmi';
+import { Chain, configureChains, createConfig, WagmiConfig } from 'wagmi';
 import { sepolia } from 'wagmi/chains';
 import { alchemyProvider } from 'wagmi/providers/alchemy';
 import { publicProvider } from 'wagmi/providers/public';
 import { AnonAadhaarProvider } from 'anon-aadhaar-react';
+
+const customChain = {
+  name: 'Hedera Testnet',
+  chainId: 296,
+  rpcUrls: {
+    public: { http: ['https://testnet.hashio.io/api'] },
+    default: { http: ['https://testnet.hashio.io/api'] },
+  },
+  nativeCurrency: { name: 'HBAR', symbol: 'HBAR', decimals: 8 },
+}
 const { chains, publicClient } = configureChains(
-  [sepolia],
+  [customChain],
   [
     alchemyProvider({ apiKey: process.env.REACT_APP_ALCHEMY_ID }),
     publicProvider()
