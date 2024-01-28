@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
+import { ConnectButton } from '@rainbow-me/rainbowkit';
 const Navbar = () => {
     return (
         <>
@@ -12,7 +12,8 @@ const Navbar = () => {
                     </div>
                 </div>
                 <div className='flex lg:mr-7 gap-3 lg:gap-6 items-center'>
-                    <Link to="/auth"><button className='text-sm text-white border-[#FD6219] border-2 font-bold px-2 py-1 lg:px-5 lg:py-2 rounded-lg'>Connet Wallet</button></Link>
+                    <ConnectButton />
+                    {/* <Link to="/auth"><button className='text-sm text-white border-[#FD6219] border-2 font-bold px-2 py-1 lg:px-5 lg:py-2 rounded-lg'>Connet Wallet</button></Link> */}
                 </div>
             </nav>
         </>

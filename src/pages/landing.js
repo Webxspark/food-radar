@@ -1,10 +1,20 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import Navbar from '../components/navbar';
 import arrow from '../assets/Arrow 1.png';
 import speaker from '../assets/image 1.png';
 import landing from '../assets/image 2.png';
-
+import { getAccount } from '@wagmi/core';
+import { useAccount } from "wagmi";
+import { useNavigate } from 'react-router-dom';
 const Landing = () => {
+    const { address, isConnected } = useAccount();
+    // const isMounted = useRef(false);
+    const navigate = useNavigate();
+    useEffect(() => {
+        if (isConnected == true && address != undefined) {
+            navigate('/dashboard');
+        }
+    }, [address, isConnected])
     return (
         <div>
             <Navbar />
