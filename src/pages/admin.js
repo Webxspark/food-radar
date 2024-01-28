@@ -1,6 +1,6 @@
 import React from 'react';
 import { useEffect, useRef } from "react";
-import { Table, Tabs, Tag } from "antd";
+import { Select, Table, Tabs, Tag } from "antd";
 import { Link } from "react-router-dom";
 import AdminPage from './admin-page';
 
@@ -164,6 +164,13 @@ const ResolvedTab = () => {
 const AdminHome = () => {
     const isMounted = useRef(false);
 
+    const onChange = (value) => {
+        console.log(`selected ${value}`);
+    };
+    const onSearch = (value) => {
+        console.log('search:', value);
+    };
+
     useEffect(() => {
         if (!isMounted.current) {
             isMounted.current = true;
@@ -203,6 +210,7 @@ const AdminHome = () => {
                         items={items}
                     />
                 </div>
+                
             </AdminPage>
         </>
     )

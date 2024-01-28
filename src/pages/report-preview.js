@@ -1,8 +1,16 @@
-import { Table } from 'antd';
+import { Select, Table } from 'antd';
 import React from 'react';
 import AdminPage from './admin-page';
 
 const ReportPreview = () => {
+
+    const onChange = (value) => {
+        console.log(`selected ${value}`);
+    };
+    const onSearch = (value) => {
+        console.log('search:', value);
+    };
+
     const columns = [
         {
             title: 'Info',
@@ -81,10 +89,33 @@ const ReportPreview = () => {
                         <Table pagination={false} dataSource={dataSource} columns={columns} />
 
                     </div>
-                    <div className="col-span-4">
+                    <div className="col-span-4 flex flex-col gap-5">
                         <div className="flex flex-col gap-5 mt-4">
                             <div className="text-xl font-bold text-[#FD6219]">Reporter's Info</div>
                             <Table pagination={false} dataSource={dataSourceTwo} columns={columns} />
+                        </div>
+                        <div className='flex gap-4 justify-between'>
+                            <Select
+                                placeholder="Update Status"
+                                onChange={onChange}
+                                onSearch={onSearch}
+                                className='border-[1px] rounded-lg w-[80%]'
+                                options={[
+                                    {
+                                        value: 'Under Investigation',
+                                        label: 'Under Investigation',
+                                    },
+                                    {
+                                        value: 'In Progess',
+                                        label: 'In Progess',
+                                    },
+                                    {
+                                        value: 'Resolved',
+                                        label: 'Resolved',
+                                    },
+                                ]}
+                            />
+                            <button className='text-white border-[#FD6219] border-2 px-1 lg:px-2 rounded-lg'>Update</button>
                         </div>
                     </div>
                 </div>

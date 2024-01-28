@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import Navbar from '../components/navbar';
 import arrow from '../assets/Arrow 1.png';
 import speaker from '../assets/image 1.png';
-import landing from '../assets/image 2.png';
+import landing from '../assets/Untitled design(1).png';
 import { getAccount } from '@wagmi/core';
 import { useAccount } from "wagmi";
 import { useNavigate } from 'react-router-dom';
@@ -30,7 +30,7 @@ const Landing = () => {
                     Food safety just got social. Join the FoodRadar movement.<br /> Blockchain + you = safer bites.
                 </div>
                 <div className='p-10 flex gap-20 items-center justify-center'>
-                    <img className='h-80' src={landing} />
+                    <img className='h-80 rounded-2xl' src={landing} />
                     <div className='flex flex-col gap-10 px-8'>
                         <div className='text-white'>A decentralized platform that makes it easy for consumers to report food safety issues to the authorities without  having to meet them in person.</div>
                         <div className='text-white font-semibold text-lg flex gap-10 items-center'>
